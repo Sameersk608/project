@@ -1,0 +1,55 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Shoppers Hub For Small Business</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        &nbsp;<table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+            <tr>
+                <td align="center" colspan="3"><label><H1>Shoppers Hub For Small Business</H1></label></td>
+            </tr>
+        <tr>
+        <td align="right" colspan="2"><asp:LinkButton ID="lnksupp" runat="server" 
+                OnClick="lnksupp_Click" CausesValidation="False" 
+                PostBackUrl="~/supplier/suppLogin.aspx">Supplier</asp:LinkButton></td>
+        </tr>
+            <tr>
+                <td colspan="2" style="height: 5px">
+                 <span style="font-size: 32pt"><em><span style="color: #cc0000"></span></em><span style="color: #00ff33"></span> </span>
+                        <span style="font-size:15px">Welcome! <asp:LinkButton ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" CausesValidation="False">Sign in </asp:LinkButton>  <asp:Label ID="lblOr" runat="server" Text="Label"> or </asp:Label> <asp:LinkButton ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" CausesValidation="False">register</asp:LinkButton>
+                         <asp:Label ID="lblName" runat="server" Text="Label"> </asp:Label> 
+                         </span><br />
+                       <br />
+                        <div style="border-left-color: silver; border-bottom-color: silver; border-top-style: groove; border-top-color: silver; border-right-style: groove; border-left-style: groove; border-right-color: silver; border-bottom-style: groove;">
+                         <div align="right">
+                        <asp:LinkButton runat="server" CausesValidation="false" onclick="LinkButton10_Click"></asp:LinkButton>|
+                        <asp:LinkButton ID="LinkButton11" runat="server" CausesValidation="false" OnClick="LinkButton11_Click1">Logout</asp:LinkButton>
+                        </div>
+                        <table>
+                        <tr>
+                        <td><asp:TextBox ID="TextBox1" runat="server" Width="300px"></asp:TextBox>
+                        <asp:DropDownList ID="ddlpname" runat="server" Width="300px"></asp:DropDownList>
+                        <asp:Button ID="Button2" runat="server" Text="Search" CausesValidation="false" OnClick="Button2_Click"/>
+                        </td>
+                        </tr>
+                        </table></div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 200px">               
+                </td>
+                <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
